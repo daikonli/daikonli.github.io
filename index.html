@@ -2,26 +2,121 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport"
+    content="initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no,width=device-width, viewport-fit=cover">
+
   <!-- import CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
 <div id="app">
-  <el-button @click="visible = true">Button</el-button>
-  <el-dialog :visible.sync="visible" title="Hello world">
-    <p>Try Element</p>
-  </el-dialog>
+  <div class="u-content">
+    <div class="u-content_header">
+      <img class="u-content_header_img" src="img/header.png" alt="">
+    </div>
+    <div class="u-content_body" v-if="showIndex===0">
+      <img class="u-content_body_img" src="img/download.jpg" alt="">
+      <span class="u-content_body_tips">我们的故事就这么开始了...</span>
+      <div class="u-content_body_btn">
+        <div class="u-btn">
+          <mt-button @click.native="goNext">相遇</mt-button>
+        </div>
+      </div>
+    </div>
+    <div class="u-content_body" v-else-if="showIndex===1">
+      <video class="u-video" preload="auto" x5-video-player-type="h5-page" mtt-playsinline="true" playsinline=""
+        webkit-playsinline="true" controls="controls"
+        src="https://kandian-1258344701.file.myqcloud.com/novel_test/0.1.0/static/media/video_1.242deaca.mp4"
+        poster="https://kandian-1258344701.file.myqcloud.com/novel_test/0.1.0/static/media/video_cover_1.001b4582.png"></video>
+      <div class="u-content_body_next_btn">
+        <div class="u-btn">
+          <mt-button @click.native="goBack">相识</mt-button>
+        </div>
+        <div class="u-btn">
+          <mt-button @click.native="goNext">相顾</mt-button>
+        </div>
+      </div>
+    </div>
+    <div class="u-content_body" v-else-if="showIndex===2">
+      <video class="u-video" preload="auto" x5-video-player-type="h5-page" mtt-playsinline="true" playsinline=""
+        webkit-playsinline="true" controls="controls"
+        src="https://kandian-1258344701.file.myqcloud.com/novel_test/0.1.0/static/media/video_1.242deaca.mp4"
+        poster="https://kandian-1258344701.file.myqcloud.com/novel_test/0.1.0/static/media/video_cover_1.001b4582.png"></video>
+      <div class="u-content_body_next_btn">
+        <div class="u-btn">
+          <mt-button @click.native="goBack">相遇</mt-button>
+        </div>
+        <div class="u-btn">
+          <mt-button @click.native="goNext">相信</mt-button>
+        </div>
+      </div>
+    </div>
+    <div class="u-content_body" v-else-if="showIndex===3">
+      <video class="u-video" preload="auto" x5-video-player-type="h5-page" mtt-playsinline="true" playsinline=""
+        webkit-playsinline="true" controls="controls"
+        src="https://kandian-1258344701.file.myqcloud.com/novel_test/0.1.0/static/media/video_1.242deaca.mp4"
+        poster="https://kandian-1258344701.file.myqcloud.com/novel_test/0.1.0/static/media/video_cover_1.001b4582.png"></video>
+      <div class="u-content_body_next_btn">
+        <div class="u-btn">
+          <mt-button @click.native="goBack">相顾</mt-button>
+        </div>
+        <div class="u-btn">
+          <mt-button @click.native="goNext">相知</mt-button>
+        </div>
+      </div>
+    </div>
+    <div class="u-content_body" v-else-if="showIndex===4">
+      <video class="u-video" preload="auto" x5-video-player-type="h5-page" mtt-playsinline="true" playsinline=""
+        webkit-playsinline="true" controls="controls"
+        src="https://kandian-1258344701.file.myqcloud.com/novel_test/0.1.0/static/media/video_1.242deaca.mp4"
+        poster="https://kandian-1258344701.file.myqcloud.com/novel_test/0.1.0/static/media/video_cover_1.001b4582.png"></video>
+      <div class="u-content_body_next_btn">
+        <div class="u-btn">
+          <mt-button @click.native="goBack">相信</mt-button>
+        </div>
+        <div class="u-btn">
+          <mt-button @click.native="goNext">信依</mt-button>
+        </div>
+      </div>
+    </div>
+    <div class="u-content_body" v-else-if="showIndex===5">
+      <video class="u-video" preload="auto" x5-video-player-type="h5-page" mtt-playsinline="true" playsinline=""
+        webkit-playsinline="true" controls="controls"
+        src="https://kandian-1258344701.file.myqcloud.com/novel_test/0.1.0/static/media/video_1.242deaca.mp4"
+        poster="https://kandian-1258344701.file.myqcloud.com/novel_test/0.1.0/static/media/video_cover_1.001b4582.png"></video>
+      <div class="u-content_body_next_btn">
+        <div class="u-btn">
+          <mt-button @click.native="goBack">相知</mt-button>
+        </div>
+        <div class="u-btn">
+          <mt-button @click.native="goStart">重识</mt-button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 </body>
-<!-- import Vue before Element -->
-<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- import Vue before Mint UI -->
+<script src="js/vue.js"></script>
 <!-- import JavaScript -->
-<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="js/mint.js"></script>
 <script>
   new Vue({
     el: '#app',
-    data: function () {
-      return { visible: false }
+    methods: {
+      goBack: function () {
+        this.showIndex = this.showIndex - 1
+      },
+      goNext: function () {
+        this.showIndex = this.showIndex + 1
+      },
+      goStart: function () {
+        this.showIndex = 0
+      }
+    },
+    data: {
+      showIndex: 0
     }
   })
 </script>
