@@ -35,7 +35,7 @@ body:before {
     width: 375px;
     display: flex;
     flex-direction: column;
-    padding-top: 32px;
+    justify-content: center;
 }
 
 .u-content_header {
