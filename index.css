@@ -32,11 +32,12 @@ body:before {
 }
 
 .u-content {
-    width: 375px;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .u-content_header {
