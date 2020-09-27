@@ -12,8 +12,8 @@
 <body>
 <div id="app">
   <div class="u-content">
-    <div class="u-content_header">
-      <img class="u-content_header_img" src="img/header.png" alt="">
+    <div class="u-content_header" v-if="showIndex!==5">
+      <img class="u-content_header_img" src="img/header.jpg" alt="">
     </div>
     <div class="u-content_body" v-if="showIndex===0">
       <img class="u-content_body_img" src="img/download.jpg" alt="">
@@ -27,8 +27,7 @@
     <div class="u-content_body" v-else-if="showIndex===1">
       <video class="u-video" preload="auto" x5-video-player-type="h5-page" mtt-playsinline="true" playsinline=""
         webkit-playsinline="true" controls="controls"
-        src="https://kandian-1258344701.file.myqcloud.com/novel_test/0.1.0/static/media/video_1.242deaca.mp4"
-        poster="https://kandian-1258344701.file.myqcloud.com/novel_test/0.1.0/static/media/video_cover_1.001b4582.png"></video>
+        src="video/1.mp4"></video>
       <div class="u-content_body_next_btn">
         <div class="u-btn">
           <mt-button @click.native="goBack">相识</mt-button>
@@ -41,8 +40,7 @@
     <div class="u-content_body" v-else-if="showIndex===2">
       <video class="u-video" preload="auto" x5-video-player-type="h5-page" mtt-playsinline="true" playsinline=""
         webkit-playsinline="true" controls="controls"
-        src="https://kandian-1258344701.file.myqcloud.com/novel_test/0.1.0/static/media/video_1.242deaca.mp4"
-        poster="https://kandian-1258344701.file.myqcloud.com/novel_test/0.1.0/static/media/video_cover_1.001b4582.png"></video>
+        src="video/2.mp4"></video>
       <div class="u-content_body_next_btn">
         <div class="u-btn">
           <mt-button @click.native="goBack">相遇</mt-button>
@@ -55,8 +53,7 @@
     <div class="u-content_body" v-else-if="showIndex===3">
       <video class="u-video" preload="auto" x5-video-player-type="h5-page" mtt-playsinline="true" playsinline=""
         webkit-playsinline="true" controls="controls"
-        src="https://kandian-1258344701.file.myqcloud.com/novel_test/0.1.0/static/media/video_1.242deaca.mp4"
-        poster="https://kandian-1258344701.file.myqcloud.com/novel_test/0.1.0/static/media/video_cover_1.001b4582.png"></video>
+        src="video/3.mp4"></video>
       <div class="u-content_body_next_btn">
         <div class="u-btn">
           <mt-button @click.native="goBack">相顾</mt-button>
@@ -69,28 +66,22 @@
     <div class="u-content_body" v-else-if="showIndex===4">
       <video class="u-video" preload="auto" x5-video-player-type="h5-page" mtt-playsinline="true" playsinline=""
         webkit-playsinline="true" controls="controls"
-        src="https://kandian-1258344701.file.myqcloud.com/novel_test/0.1.0/static/media/video_1.242deaca.mp4"
-        poster="https://kandian-1258344701.file.myqcloud.com/novel_test/0.1.0/static/media/video_cover_1.001b4582.png"></video>
+        src="video/4.mp4"></video>
       <div class="u-content_body_next_btn">
         <div class="u-btn">
           <mt-button @click.native="goBack">相信</mt-button>
         </div>
         <div class="u-btn">
-          <mt-button @click.native="goNext">信依</mt-button>
+          <mt-button @click.native="goNext">相依</mt-button>
         </div>
       </div>
     </div>
     <div class="u-content_body" v-else-if="showIndex===5">
-      <video class="u-video" preload="auto" x5-video-player-type="h5-page" mtt-playsinline="true" playsinline=""
-        webkit-playsinline="true" controls="controls"
-        src="https://kandian-1258344701.file.myqcloud.com/novel_test/0.1.0/static/media/video_1.242deaca.mp4"
-        poster="https://kandian-1258344701.file.myqcloud.com/novel_test/0.1.0/static/media/video_cover_1.001b4582.png"></video>
+      <img class="u-content_body_next_img" src="img/love.png" alt="">
+      <span class="u-content_body_next_tips">2020，故事还要继续...</span>
       <div class="u-content_body_next_btn">
         <div class="u-btn">
           <mt-button @click.native="goBack">相知</mt-button>
-        </div>
-        <div class="u-btn">
-          <mt-button @click.native="goStart">重识</mt-button>
         </div>
       </div>
     </div>

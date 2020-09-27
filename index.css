@@ -42,16 +42,19 @@ body:before {
 
 .u-content_header {
     width: 375px;
+    padding: 0 15px;
 }
 
 .u-content_header_img {
-    width: 375px;
+    width: 345px;
     height: 184px;
+    border: 8px solid #303030;
+    border-radius: 8px 8px 0 0;
 }
 
 .u-content_body {
     position: relative;
-    margin-top: -4px;
+    margin-top: -8px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -109,6 +112,26 @@ body:before {
     justify-content: space-around;
     align-items: center;
     padding: 0 60px;
+}
+
+.u-content_body_next_img {
+    width: 345px;
+    height: 425px;
+    border: 8px solid #303030;
+    padding-bottom: 80px;
+    background: #fff;
+}
+
+.u-content_body_next_tips {
+    position: absolute;
+    bottom: -100px;
+    background: #ffb6a7;
+    color: #730600;
+    font-size: 18px;
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 8px;
+    margin-top: 160px;
 }
 
 .u-btn {
